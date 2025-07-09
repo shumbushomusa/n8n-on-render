@@ -4,7 +4,9 @@ services:
     env: image
     plan: free
     region: oregon
-    image: n8nio/n8n
+    image:
+      repository: n8nio/n8n
+      tag: latest
     autoDeploy: true
     envVars:
       - key: N8N_HOST
