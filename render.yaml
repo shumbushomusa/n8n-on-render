@@ -1,11 +1,10 @@
 services:
   - type: web
     name: n8n
-    env: docker
+    env: image
     plan: free
     region: oregon
-    dockerImage:
-      image: n8nio/n8n
+    image: n8nio/n8n
     autoDeploy: true
     envVars:
       - key: N8N_HOST
