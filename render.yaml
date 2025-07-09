@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    plan: free
+    region: oregon
+    image: n8nio/n8n
+    autoDeploy: true
+    envVars:
+      - key: N8N_HOST
+        value: 0.0.0.0
+      - key: N8N_PORT
+        value: 5678
+      - key: WEBHOOK_TUNNEL_URL
+        value: https://n8n-second-qlde.onrender.com
+      - key: N8N_EDITOR_BASE_URL
+        value: https://n8n-second-qlde.onrender.com
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: true
+      - key: N8N_BASIC_AUTH_USER
+        value: admin
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: yourStrongPassword
