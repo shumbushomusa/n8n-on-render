@@ -4,7 +4,8 @@ services:
     env: docker
     plan: free
     region: oregon
-    image: n8nio/n8n
+    dockerImage:
+      image: n8nio/n8n
     autoDeploy: true
     envVars:
       - key: N8N_HOST
